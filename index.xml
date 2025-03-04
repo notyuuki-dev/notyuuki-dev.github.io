@@ -15,5 +15,12 @@
       <guid>https://notyuuki-dev.github.io/posts/test/</guid>
       <description>A test post.</description>
     </item>
+    <item>
+      <title>Gallery</title>
+      <link>https://notyuuki-dev.github.io/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://notyuuki-dev.github.io/gallery/</guid>
+      <description>gallery</description>
+    </item>
   </channel>
 </rss>
