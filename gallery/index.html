@@ -191,7 +191,7 @@
 
 <div id="lightbox" class="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" class="lightbox-content" src="" alt="">
+    <div id="lightbox-content" class="lightbox-content"></div>
 </div>
 
 <style>
@@ -200,7 +200,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
 }
-.gallery-item img {
+.gallery-item img, .gallery-item video {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -233,11 +233,24 @@
 </style>
 
 <script>
-function openLightbox(event, src) {
+function openLightbox(event, src, type) {
     event.preventDefault();
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = src;
+    const lightbox = document.getElementById("lightbox");
+    const content = document.getElementById("lightbox-content");
+    
+    content.innerHTML = "";
+    
+    if (type === "image") {
+        content.innerHTML = `<img src="${src}" style="max-width: 100%; max-height: 100%;"/>`;
+    } else if (type === "video") {
+        content.innerHTML = `<video controls autoplay style="max-width: 100%; max-height: 100%;"><source src="${src}" type="video/mp4"></video>`;
+    } else if (type === "audio") {
+        content.innerHTML = `<audio controls autoplay><source src="${src}" type="audio/mpeg"></audio>`;
+    }
+    
+    lightbox.style.display = "flex";
 }
+
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
