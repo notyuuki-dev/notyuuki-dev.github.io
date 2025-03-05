@@ -90,8 +90,8 @@
   "keywords": [
     
   ],
-  "articleBody": "\r×\r",
-  "wordCount" : "1",
+  "articleBody": "\r",
+  "wordCount" : "0",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -185,77 +185,25 @@
   </header> 
   <div class="post-content">
 
-<div class="gallery-grid">
-    
-</div>
 
-<div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <div id="lightbox-content" class="lightbox-content"></div>
-</div>
 
 <style>
-.gallery-grid {
+  .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-}
-.gallery-item img, .gallery-item video {
+  }
+  .gallery img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
-}
-
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
-}
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+  }
 </style>
 
-<script>
-function openLightbox(event, src, type) {
-    event.preventDefault();
-    const lightbox = document.getElementById("lightbox");
-    const content = document.getElementById("lightbox-content");
-    
-    content.innerHTML = "";
-    
-    if (type === "image") {
-        content.innerHTML = `<img src="${src}" style="max-width: 100%; max-height: 100%;"/>`;
-    } else if (type === "video") {
-        content.innerHTML = `<video controls autoplay style="max-width: 100%; max-height: 100%;"><source src="${src}" type="video/mp4"></video>`;
-    } else if (type === "audio") {
-        content.innerHTML = `<audio controls autoplay><source src="${src}" type="audio/mpeg"></audio>`;
-    }
-    
-    lightbox.style.display = "flex";
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-</script>
-
+<div class="gallery">
+  
+</div>
 
 
   </div>
