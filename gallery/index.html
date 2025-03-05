@@ -10,7 +10,7 @@
 <meta name="description" content="gallery">
 <meta name="author" content="">
 <link rel="canonical" href="https://notyuuki-dev.github.io/gallery/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.91af2866a4b4e4213699f3bcacb737617d111c8262605246a1c4f3cbd5b2adcc.css" integrity="sha256-ka8oZqS05CE2mfO8rLc3YX0RHIJiYFJGocTzy9Wyrcw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://notyuuki-dev.github.io/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://notyuuki-dev.github.io/assets/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://notyuuki-dev.github.io/assets/favicon-32x32.png">
@@ -90,8 +90,8 @@
   "keywords": [
     
   ],
-  "articleBody": "\r",
-  "wordCount" : "0",
+  "articleBody": "\r×\r",
+  "wordCount" : "1",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -187,23 +187,93 @@
 
 
 
+
+
+<div class="gallery-grid">
+    
+        
+            
+            
+            <a href="#" class="gallery-item" onclick="openLightbox(event, '\/img\/Screen Shot 2025-01-22 at 02.44.07.png')">
+                <img style="text-decoration: none;" src="/img/Screen%20Shot%202025-01-22%20at%2002.44.07.png" alt="Screen Shot 2025-01-22 at 02.44.07.png" loading="lazy"/>
+            </a>
+        
+    
+        
+            
+            
+            <a href="#" class="gallery-item" onclick="openLightbox(event, '\/img\/because Irreversible was losing his shit.jpg')">
+                <img style="text-decoration: none;" src="/img/because%20Irreversible%20was%20losing%20his%20shit.jpg" alt="because Irreversible was losing his shit.jpg" loading="lazy"/>
+            </a>
+        
+    
+        
+            
+            
+            <a href="#" class="gallery-item" onclick="openLightbox(event, '\/img\/yuuki.png')">
+                <img style="text-decoration: none;" src="/img/yuuki.png" alt="yuuki.png" loading="lazy"/>
+            </a>
+        
+    
+</div>
+
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" src="" alt="">
+</div>
+
 <style>
-  .gallery {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-  }
-  .gallery img {
+    align-items: start;
+    
+}
+
+.gallery-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
-  }
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
 </style>
 
-<div class="gallery">
-  
-</div>
+<script>
+function openLightbox(event, src) {
+    event.preventDefault();
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
 
 
   </div>
